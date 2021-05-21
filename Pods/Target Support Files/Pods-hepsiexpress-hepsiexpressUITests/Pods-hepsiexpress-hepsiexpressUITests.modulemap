@@ -1,0 +1,6 @@
+framework module Pods_hepsiexpress_hepsiexpressUITests {
+  umbrella header "Pods-hepsiexpress-hepsiexpressUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
