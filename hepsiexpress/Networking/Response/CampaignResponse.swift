@@ -8,6 +8,8 @@
 import Foundation
 import ObjectMapper
 
+protocol CampaignItem {}
+
 class CampaignResponse: Mappable {
 
     var banners: [Banner]?
@@ -23,7 +25,7 @@ class CampaignResponse: Mappable {
     }
 }
 
-class Banner: Mappable {
+class Banner: Mappable, CampaignItem {
     
     var image: Image?
     
@@ -53,7 +55,7 @@ class Image: Mappable {
     }
 }
 
-class HotDeal: Mappable {
+class HotDeal: Mappable, CampaignItem {
     
     var title: String?
     var expirationDate: String?
