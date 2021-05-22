@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import SnapKit
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController<MainViewModel> {
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        view.backgroundColor = .orange
+    let campaignsViewController = CampaignsViewController()
+    
+    override func layout() {
+        super.layout()
+        view.addSubview(campaignsViewController.view)
+        campaignsViewController.view.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
     }
 }
