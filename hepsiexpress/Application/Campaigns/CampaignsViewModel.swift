@@ -15,6 +15,7 @@ class CampaignsViewModel: BaseViewModel {
 
     var isLoadingMore = Observable<Bool>(false)
     var isEndOfPageReached = Observable<Bool>(false)
+    var isRefreshing = Observable<Bool>(false)
     
     private var currentPageIndex: Int = 0
     
@@ -30,13 +31,16 @@ class CampaignsViewModel: BaseViewModel {
     }
     
     func refresh() {
+        self.isRefreshing.send(true)
         let commonPageRequest = CommonPageRequest(pageId: 0)
         campaignsAPI.getCampaigns(params: commonPageRequest.toDict()) { [weak self] campaignsResponse in
             self?.isEndOfPageReached.send(false)
             self?.currentPageIndex = 0
             self?.refreshSuccessBlock(campaignsResponse: campaignsResponse)
+            self?.isRefreshing.send(false)
         } failure: {
             self.currentPageIndex = 0
+            self.isRefreshing.send(false)
         }
     }
     

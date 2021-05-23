@@ -13,6 +13,14 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
     
     let disposeBag = DisposeBag()
     
+    private lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: .valueChanged)
+        refreshControl.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+        refreshControl.tintColor = UIColor.lightGray.withAlphaComponent(0.6)
+        return refreshControl
+    }()
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(BannerTableViewCell.self, forCellReuseIdentifier: BannerTableViewCell.description())
@@ -53,6 +61,7 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
         }
         
         tableView.tableFooterView = viewLoadMore
+        tableView.addSubview(refreshControl)
     }
     
     override func bind() {
@@ -83,6 +92,16 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
                 self.viewLoadMore.isHidden = true
             }
         }.dispose(in: disposeBag)
+        
+        viewModel.isRefreshing.observeNext { isRefreshing in
+            if !isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
+        }.dispose(in: disposeBag)
+    }
+    
+    @objc private func refreshControlAction(_ sender: AnyObject) {
+        viewModel.refresh()
     }
 }
 
