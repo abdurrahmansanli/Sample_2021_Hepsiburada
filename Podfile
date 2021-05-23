@@ -1,10 +1,6 @@
 platform :ios, '11.0'
 
-target 'hepsiexpress' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for hepsiexpress
+def shared_pods
   pod 'Alamofire', '~> 5.0.0-beta.2'
   pod 'AlamofireObjectMapper'
   pod 'SwiftyJSON'
@@ -14,14 +10,21 @@ target 'hepsiexpress' do
   
   pod "SnapKit"
   pod 'Kingfisher'
+end
+
+def testing_pods
+  pod 'Quick'
+  pod 'Nimble'
+end
+
+target 'hepsiexpress' do
+  use_frameworks!
+  shared_pods
+end
   
-  target 'hepsiexpressTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'hepsiexpressUITests' do
-    # Pods for testing
-  end
-
+target 'hepsiexpressTests' do
+  inherit! :search_paths
+  use_frameworks!
+  shared_pods
+  testing_pods
 end

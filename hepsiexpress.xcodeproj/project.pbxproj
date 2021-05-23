@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		300DD6A3D5D9EDD5F1CDC509 /* Pods_hepsiexpress_hepsiexpressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09978396B3DA97081D5EF126 /* Pods_hepsiexpress_hepsiexpressUITests.framework */; };
 		43F83CB77E7DB164D283A8DC /* Pods_hepsiexpressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E49A807EAAB5890F00BDE3 /* Pods_hepsiexpressTests.framework */; };
 		5BBC199343925990E2BB1FF5 /* Pods_hepsiexpress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570DC3AAA384F27B538A4BC5 /* Pods_hepsiexpress.framework */; };
 		8456541D26590F2400CEAE96 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456541C26590F2400CEAE96 /* MainViewModel.swift */; };
@@ -23,6 +22,10 @@
 		846A5F122658269B00BAD564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A5F102658269B00BAD564 /* LaunchScreen.storyboard */; };
 		846A5F1D2658269B00BAD564 /* hepsiexpressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A5F1C2658269B00BAD564 /* hepsiexpressTests.swift */; };
 		846A5F282658269B00BAD564 /* hepsiexpressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A5F272658269B00BAD564 /* hepsiexpressUITests.swift */; };
+		84B1CB0F265ADB6800CFB2DC /* CampaignsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1CB0E265ADB6800CFB2DC /* CampaignsSpec.swift */; };
+		84B1CB12265ADE3100CFB2DC /* CampaignsAPIStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1CB11265ADE3100CFB2DC /* CampaignsAPIStub.swift */; };
+		84B1CB15265AE53E00CFB2DC /* Campaigns1.json in Resources */ = {isa = PBXBuildFile; fileRef = 84B1CB14265AE53E00CFB2DC /* Campaigns1.json */; };
+		84B1CB17265AEA2A00CFB2DC /* Campaigns2.json in Resources */ = {isa = PBXBuildFile; fileRef = 84B1CB16265AEA2A00CFB2DC /* Campaigns2.json */; };
 		84C77ECC265829C900E014FB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C77ECB265829C900E014FB /* MainViewController.swift */; };
 		84C77ED526582D8500E014FB /* CampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C77ED426582D8500E014FB /* CampaignsViewController.swift */; };
 		84C77ED726582D8F00E014FB /* CampaignsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C77ED626582D8F00E014FB /* CampaignsViewModel.swift */; };
@@ -51,10 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01B8995A6CF9710482DE9743 /* Pods-hepsiexpress-hepsiexpressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hepsiexpress-hepsiexpressUITests.release.xcconfig"; path = "Target Support Files/Pods-hepsiexpress-hepsiexpressUITests/Pods-hepsiexpress-hepsiexpressUITests.release.xcconfig"; sourceTree = "<group>"; };
-		09978396B3DA97081D5EF126 /* Pods_hepsiexpress_hepsiexpressUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hepsiexpress_hepsiexpressUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		387FEA4011401791B9A53734 /* Pods-hepsiexpress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hepsiexpress.release.xcconfig"; path = "Target Support Files/Pods-hepsiexpress/Pods-hepsiexpress.release.xcconfig"; sourceTree = "<group>"; };
-		3A514084AE9FC05077E95075 /* Pods-hepsiexpress-hepsiexpressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hepsiexpress-hepsiexpressUITests.debug.xcconfig"; path = "Target Support Files/Pods-hepsiexpress-hepsiexpressUITests/Pods-hepsiexpress-hepsiexpressUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		570DC3AAA384F27B538A4BC5 /* Pods_hepsiexpress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hepsiexpress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8456541C26590F2400CEAE96 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		8456541E2659146B00CEAE96 /* ObjectPairingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPairingService.swift; sourceTree = "<group>"; };
@@ -75,6 +75,10 @@
 		846A5F232658269B00BAD564 /* hepsiexpressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hepsiexpressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A5F272658269B00BAD564 /* hepsiexpressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hepsiexpressUITests.swift; sourceTree = "<group>"; };
 		846A5F292658269B00BAD564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B1CB0E265ADB6800CFB2DC /* CampaignsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsSpec.swift; sourceTree = "<group>"; };
+		84B1CB11265ADE3100CFB2DC /* CampaignsAPIStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsAPIStub.swift; sourceTree = "<group>"; };
+		84B1CB14265AE53E00CFB2DC /* Campaigns1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Campaigns1.json; sourceTree = "<group>"; };
+		84B1CB16265AEA2A00CFB2DC /* Campaigns2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Campaigns2.json; sourceTree = "<group>"; };
 		84C77ECB265829C900E014FB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		84C77ED426582D8500E014FB /* CampaignsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewController.swift; sourceTree = "<group>"; };
 		84C77ED626582D8F00E014FB /* CampaignsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewModel.swift; sourceTree = "<group>"; };
@@ -110,7 +114,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				300DD6A3D5D9EDD5F1CDC509 /* Pods_hepsiexpress_hepsiexpressUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +125,6 @@
 			children = (
 				932BDCCF4DB0DB8D8349A535 /* Pods-hepsiexpress.debug.xcconfig */,
 				387FEA4011401791B9A53734 /* Pods-hepsiexpress.release.xcconfig */,
-				3A514084AE9FC05077E95075 /* Pods-hepsiexpress-hepsiexpressUITests.debug.xcconfig */,
-				01B8995A6CF9710482DE9743 /* Pods-hepsiexpress-hepsiexpressUITests.release.xcconfig */,
 				F2BC4A66166F2612A8927E17 /* Pods-hepsiexpressTests.debug.xcconfig */,
 				A378B1CB09357DF73A6F9F8E /* Pods-hepsiexpressTests.release.xcconfig */,
 			);
@@ -178,7 +179,10 @@
 		846A5F1B2658269B00BAD564 /* hepsiexpressTests */ = {
 			isa = PBXGroup;
 			children = (
+				84B1CB13265AE4E700CFB2DC /* JSON */,
+				84B1CB10265ADE2300CFB2DC /* APIStubs */,
 				846A5F1C2658269B00BAD564 /* hepsiexpressTests.swift */,
+				84B1CB0E265ADB6800CFB2DC /* CampaignsSpec.swift */,
 				846A5F1E2658269B00BAD564 /* Info.plist */,
 			);
 			path = hepsiexpressTests;
@@ -191,6 +195,23 @@
 				846A5F292658269B00BAD564 /* Info.plist */,
 			);
 			path = hepsiexpressUITests;
+			sourceTree = "<group>";
+		};
+		84B1CB10265ADE2300CFB2DC /* APIStubs */ = {
+			isa = PBXGroup;
+			children = (
+				84B1CB11265ADE3100CFB2DC /* CampaignsAPIStub.swift */,
+			);
+			path = APIStubs;
+			sourceTree = "<group>";
+		};
+		84B1CB13265AE4E700CFB2DC /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				84B1CB14265AE53E00CFB2DC /* Campaigns1.json */,
+				84B1CB16265AEA2A00CFB2DC /* Campaigns2.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		84C77EC7265826FA00E014FB /* Resources */ = {
@@ -305,7 +326,6 @@
 			isa = PBXGroup;
 			children = (
 				570DC3AAA384F27B538A4BC5 /* Pods_hepsiexpress.framework */,
-				09978396B3DA97081D5EF126 /* Pods_hepsiexpress_hepsiexpressUITests.framework */,
 				D1E49A807EAAB5890F00BDE3 /* Pods_hepsiexpressTests.framework */,
 			);
 			name = Frameworks;
@@ -341,6 +361,7 @@
 				846A5F142658269B00BAD564 /* Sources */,
 				846A5F152658269B00BAD564 /* Frameworks */,
 				846A5F162658269B00BAD564 /* Resources */,
+				09AA0CBFB2859F4D4D63386D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,11 +377,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 846A5F322658269B00BAD564 /* Build configuration list for PBXNativeTarget "hepsiexpressUITests" */;
 			buildPhases = (
-				C24336DED81195CC94C25747 /* [CP] Check Pods Manifest.lock */,
 				846A5F1F2658269B00BAD564 /* Sources */,
 				846A5F202658269B00BAD564 /* Frameworks */,
 				846A5F212658269B00BAD564 /* Resources */,
-				FF802BBF99F2413F914E6335 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -428,6 +447,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B1CB15265AE53E00CFB2DC /* Campaigns1.json in Resources */,
+				84B1CB17265AEA2A00CFB2DC /* Campaigns2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +462,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		09AA0CBFB2859F4D4D63386D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hepsiexpressTests/Pods-hepsiexpressTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hepsiexpressTests/Pods-hepsiexpressTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hepsiexpressTests/Pods-hepsiexpressTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		239D122632B9951E669B10B4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,45 +540,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hepsiexpress/Pods-hepsiexpress-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C24336DED81195CC94C25747 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-hepsiexpress-hepsiexpressUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FF802BBF99F2413F914E6335 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hepsiexpress-hepsiexpressUITests/Pods-hepsiexpress-hepsiexpressUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hepsiexpress-hepsiexpressUITests/Pods-hepsiexpress-hepsiexpressUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hepsiexpress-hepsiexpressUITests/Pods-hepsiexpress-hepsiexpressUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -572,6 +571,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B1CB12265ADE3100CFB2DC /* CampaignsAPIStub.swift in Sources */,
+				84B1CB0F265ADB6800CFB2DC /* CampaignsSpec.swift in Sources */,
 				846A5F1D2658269B00BAD564 /* hepsiexpressTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -817,7 +818,6 @@
 		};
 		846A5F332658269B00BAD564 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A514084AE9FC05077E95075 /* Pods-hepsiexpress-hepsiexpressUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -838,7 +838,6 @@
 		};
 		846A5F342658269B00BAD564 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01B8995A6CF9710482DE9743 /* Pods-hepsiexpress-hepsiexpressUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
