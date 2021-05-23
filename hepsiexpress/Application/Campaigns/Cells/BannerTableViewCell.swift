@@ -40,7 +40,7 @@ class BannerTableViewCell: UITableViewCell {
     }
     
     func refreshWithBanner(_ banner: Banner) {
-        contentView.backgroundColor = UIColor.green.withAlphaComponent(0.3)
+        contentView.backgroundColor = .white
         
         guard let bannerHeight = banner.image?.height else { return }
         guard let bannerWidth = banner.image?.width else { return }

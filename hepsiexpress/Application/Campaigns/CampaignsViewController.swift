@@ -13,6 +13,12 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
     
     let disposeBag = DisposeBag()
     
+    private lazy var activityIndicatorInitialLoadingView: UIActivityIndicatorView = {
+        let activityIndicatorView = UIActivityIndicatorView()
+        activityIndicatorView.hidesWhenStopped = true
+        return activityIndicatorView
+    }()
+    
     private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: .valueChanged)
@@ -48,7 +54,7 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.refresh()
+        initialLoadingBlock()
     }
     
     override func layout() {
@@ -62,6 +68,11 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
         
         tableView.tableFooterView = viewLoadMore
         tableView.addSubview(refreshControl)
+        
+        view.addSubview(activityIndicatorInitialLoadingView)
+        activityIndicatorInitialLoadingView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
     }
     
     override func bind() {
@@ -96,8 +107,14 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
         viewModel.isRefreshing.observeNext { isRefreshing in
             if !isRefreshing {
                 self.refreshControl.endRefreshing()
+                self.activityIndicatorInitialLoadingView.stopAnimating()
             }
         }.dispose(in: disposeBag)
+    }
+    
+    private func initialLoadingBlock() {
+        activityIndicatorInitialLoadingView.startAnimating()
+        viewModel.refresh()
     }
     
     @objc private func refreshControlAction(_ sender: AnyObject) {
