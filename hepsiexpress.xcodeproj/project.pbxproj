@@ -12,6 +12,8 @@
 		5BBC199343925990E2BB1FF5 /* Pods_hepsiexpress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570DC3AAA384F27B538A4BC5 /* Pods_hepsiexpress.framework */; };
 		8456541D26590F2400CEAE96 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456541C26590F2400CEAE96 /* MainViewModel.swift */; };
 		8456541F2659146B00CEAE96 /* ObjectPairingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456541E2659146B00CEAE96 /* ObjectPairingService.swift */; };
+		8456542226596F7500CEAE96 /* HotDealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456542126596F7500CEAE96 /* HotDealTableViewCell.swift */; };
+		8456542426596FAB00CEAE96 /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456542326596FAB00CEAE96 /* BannerTableViewCell.swift */; };
 		846A5F062658269A00BAD564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A5F052658269A00BAD564 /* AppDelegate.swift */; };
 		846A5F0F2658269B00BAD564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846A5F0E2658269B00BAD564 /* Assets.xcassets */; };
 		846A5F122658269B00BAD564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A5F102658269B00BAD564 /* LaunchScreen.storyboard */; };
@@ -52,6 +54,8 @@
 		570DC3AAA384F27B538A4BC5 /* Pods_hepsiexpress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hepsiexpress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8456541C26590F2400CEAE96 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		8456541E2659146B00CEAE96 /* ObjectPairingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPairingService.swift; sourceTree = "<group>"; };
+		8456542126596F7500CEAE96 /* HotDealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDealTableViewCell.swift; sourceTree = "<group>"; };
+		8456542326596FAB00CEAE96 /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
 		846A5F022658269A00BAD564 /* hepsiexpress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hepsiexpress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A5F052658269A00BAD564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846A5F0E2658269B00BAD564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 				A378B1CB09357DF73A6F9F8E /* Pods-hepsiexpressTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8456542026596F6800CEAE96 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8456542326596FAB00CEAE96 /* BannerTableViewCell.swift */,
+				8456542126596F7500CEAE96 /* HotDealTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		846A5EF92658269A00BAD564 = {
@@ -261,6 +274,7 @@
 			children = (
 				84C77ED426582D8500E014FB /* CampaignsViewController.swift */,
 				84C77ED626582D8F00E014FB /* CampaignsViewModel.swift */,
+				8456542026596F6800CEAE96 /* Cells */,
 			);
 			path = Campaigns;
 			sourceTree = "<group>";
@@ -531,6 +545,8 @@
 				8456541F2659146B00CEAE96 /* ObjectPairingService.swift in Sources */,
 				84C77EDC26582DCE00E014FB /* BaseViewModel.swift in Sources */,
 				84C77EE026590A8A00E014FB /* CampaignsAPI.swift in Sources */,
+				8456542426596FAB00CEAE96 /* BannerTableViewCell.swift in Sources */,
+				8456542226596F7500CEAE96 /* HotDealTableViewCell.swift in Sources */,
 				84C77EDE2658785000E014FB /* BaseAPI.swift in Sources */,
 				84C77EE226590B3100E014FB /* CampaignResponse.swift in Sources */,
 			);

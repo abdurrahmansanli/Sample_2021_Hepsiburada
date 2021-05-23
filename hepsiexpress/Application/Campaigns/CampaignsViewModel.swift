@@ -6,17 +6,32 @@
 //
 
 import UIKit
+import ReactiveKit
+import Bond
 
 class CampaignsViewModel: BaseViewModel {
     
+    let arrayCampaigns = Observable<[CampaignItem]>([CampaignItem]())
+    
+    let campaignsAPI: CampaignsAPI
+    
+    init(api: CampaignsAPI) {
+        self.campaignsAPI = api
+        super.init()
+    }
+    
+    convenience required init() {
+        self.init(api: CampaignsAPI())
+    }
+    
     func refresh() {
-        CampaignsAPI().getCampaigns { campaignsResponse in
+        campaignsAPI.getCampaigns { [weak self] campaignsResponse in
             let arrayBanners: [CampaignItem] = campaignsResponse.banners ?? [CampaignItem]()
             let arrayHotDeals: [CampaignItem] = campaignsResponse.hotDeals ?? [CampaignItem]()
             let arrayPairs = ObjectPairingService.createAvailablePairsFrom(array1: arrayBanners, array2: arrayHotDeals)
-            print("")
+            self?.arrayCampaigns.send(arrayPairs)
         } failure: {
-            print("")
+            // Intentionally unimplemented
         }
     }
 }

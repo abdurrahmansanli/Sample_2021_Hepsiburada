@@ -20,8 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func initializeRootController() {
         let rootViewController = MainViewController()
+        let rootNavigationController = UINavigationController(rootViewController: rootViewController)
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = rootViewController
+        window?.rootViewController = rootNavigationController
         window?.makeKeyAndVisible()
     }
 }

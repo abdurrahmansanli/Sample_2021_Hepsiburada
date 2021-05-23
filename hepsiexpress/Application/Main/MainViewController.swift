@@ -14,9 +14,16 @@ class MainViewController: BaseViewController<MainViewModel> {
     
     override func layout() {
         super.layout()
+        
+        view.backgroundColor = .white
+        
+        title = "Campaigns"
+        navigationController?.navigationBar.tintColor = .green
+        
         view.addSubview(campaignsViewController.view)
         campaignsViewController.view.snp.makeConstraints { maker in
-            maker.edges.equalToSuperview()
+            maker.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            maker.left.right.bottom.equalToSuperview()
         }
     }
 }
