@@ -14,6 +14,9 @@
 		8456541F2659146B00CEAE96 /* ObjectPairingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456541E2659146B00CEAE96 /* ObjectPairingService.swift */; };
 		8456542226596F7500CEAE96 /* HotDealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456542126596F7500CEAE96 /* HotDealTableViewCell.swift */; };
 		8456542426596FAB00CEAE96 /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456542326596FAB00CEAE96 /* BannerTableViewCell.swift */; };
+		84565426265A615D00CEAE96 /* CommonPageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84565425265A615D00CEAE96 /* CommonPageRequest.swift */; };
+		84565428265A61A000CEAE96 /* RequestBodyConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84565427265A61A000CEAE96 /* RequestBodyConvertable.swift */; };
+		8456542A265A61C500CEAE96 /* ObjectConverterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84565429265A61C500CEAE96 /* ObjectConverterService.swift */; };
 		846A5F062658269A00BAD564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A5F052658269A00BAD564 /* AppDelegate.swift */; };
 		846A5F0F2658269B00BAD564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846A5F0E2658269B00BAD564 /* Assets.xcassets */; };
 		846A5F122658269B00BAD564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A5F102658269B00BAD564 /* LaunchScreen.storyboard */; };
@@ -56,6 +59,9 @@
 		8456541E2659146B00CEAE96 /* ObjectPairingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPairingService.swift; sourceTree = "<group>"; };
 		8456542126596F7500CEAE96 /* HotDealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDealTableViewCell.swift; sourceTree = "<group>"; };
 		8456542326596FAB00CEAE96 /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
+		84565425265A615D00CEAE96 /* CommonPageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPageRequest.swift; sourceTree = "<group>"; };
+		84565427265A61A000CEAE96 /* RequestBodyConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBodyConvertable.swift; sourceTree = "<group>"; };
+		84565429265A61C500CEAE96 /* ObjectConverterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectConverterService.swift; sourceTree = "<group>"; };
 		846A5F022658269A00BAD564 /* hepsiexpress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hepsiexpress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A5F052658269A00BAD564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846A5F0E2658269B00BAD564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -242,6 +248,7 @@
 		84C77ECF26582AB100E014FB /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				84565425265A615D00CEAE96 /* CommonPageRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -258,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				8456541E2659146B00CEAE96 /* ObjectPairingService.swift */,
+				84565429265A61C500CEAE96 /* ObjectConverterService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -265,6 +273,7 @@
 		84C77ED226582AE000E014FB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				84565427265A61A000CEAE96 /* RequestBodyConvertable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -539,14 +548,17 @@
 				84C77EDA26582DC700E014FB /* BaseViewController.swift in Sources */,
 				84C77ED526582D8500E014FB /* CampaignsViewController.swift in Sources */,
 				84C77ECC265829C900E014FB /* MainViewController.swift in Sources */,
+				84565428265A61A000CEAE96 /* RequestBodyConvertable.swift in Sources */,
 				84C77ED726582D8F00E014FB /* CampaignsViewModel.swift in Sources */,
 				846A5F062658269A00BAD564 /* AppDelegate.swift in Sources */,
 				8456541D26590F2400CEAE96 /* MainViewModel.swift in Sources */,
+				8456542A265A61C500CEAE96 /* ObjectConverterService.swift in Sources */,
 				8456541F2659146B00CEAE96 /* ObjectPairingService.swift in Sources */,
 				84C77EDC26582DCE00E014FB /* BaseViewModel.swift in Sources */,
 				84C77EE026590A8A00E014FB /* CampaignsAPI.swift in Sources */,
 				8456542426596FAB00CEAE96 /* BannerTableViewCell.swift in Sources */,
 				8456542226596F7500CEAE96 /* HotDealTableViewCell.swift in Sources */,
+				84565426265A615D00CEAE96 /* CommonPageRequest.swift in Sources */,
 				84C77EDE2658785000E014FB /* BaseAPI.swift in Sources */,
 				84C77EE226590B3100E014FB /* CampaignResponse.swift in Sources */,
 			);
@@ -720,6 +732,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5L839368Y;
 				INFOPLIST_FILE = hepsiexpress/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -740,6 +753,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5L839368Y;
 				INFOPLIST_FILE = hepsiexpress/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

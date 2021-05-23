@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import Bond
+import ReactiveKit
 
 class CampaignsViewController: BaseViewController<CampaignsViewModel> {
+    
+    let disposeBag = DisposeBag()
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -19,6 +23,19 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
         tableView.estimatedRowHeight = 200
         tableView.separatorStyle = .none
         return tableView
+    }()
+    
+    private lazy var viewLoadMore: UIView = {
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 80))
+        customView.backgroundColor = .clear
+        let activityIndicatorView = UIActivityIndicatorView()
+        activityIndicatorView.startAnimating()
+        customView.addSubview(activityIndicatorView)
+        activityIndicatorView.snp.makeConstraints { (maker) in
+            maker.centerX.equalToSuperview()
+            maker.top.equalToSuperview().offset(10)
+        }
+        return customView
     }()
     
     override func viewDidLoad() {
@@ -34,6 +51,8 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
         tableView.snp.makeConstraints { maker in
             maker.edges.equalToSuperview()
         }
+        
+        tableView.tableFooterView = viewLoadMore
     }
     
     override func bind() {
@@ -56,10 +75,22 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
             }
             return UITableViewCell()
         }
+        
+        viewModel.isLoadingMore.observeNext { (isLoadingMore) in
+            if isLoadingMore {
+                self.viewLoadMore.isHidden = false
+            } else {
+                self.viewLoadMore.isHidden = true
+            }
+        }.dispose(in: disposeBag)
     }
 }
 
 
 extension CampaignsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.arrayCampaigns.value.count - 2 {
+            viewModel.loadMoreIfAppropriate()
+        }
+    }
 }

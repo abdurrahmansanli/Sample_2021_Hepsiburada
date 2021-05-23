@@ -1,13 +1,13 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '11.0'
 
 target 'hepsiexpress' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for hepsiexpress
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 5.0.0-beta.2'
   pod 'AlamofireObjectMapper'
+  pod 'SwiftyJSON'
   
   pod 'Bond'
   pod 'ReactiveKit'

@@ -9,11 +9,12 @@ import Alamofire
 
 class CampaignsAPI {
     
-    func getCampaigns(success: @escaping (CampaignResponse) -> Void,
-                       failure: @escaping () -> Void) {
+    func getCampaigns(params: [String: Any]?,
+                      success: @escaping (CampaignResponse) -> Void,
+                      failure: @escaping () -> Void) {
         BaseAPI.shared.request(method: .get,
-                               url: URL(string: "http://private-d190ab-campaigns19.apiary-mock.com/campaigns/0")!,
-                               parameters: nil,
+                               url: URL(string: "http://private-d190ab-campaigns19.apiary-mock.com/campaigns/_pageId")!,
+                               parameters: params,
                                success: success,
                                failure: failure)
     }

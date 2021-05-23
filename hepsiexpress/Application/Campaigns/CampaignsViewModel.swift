@@ -12,6 +12,11 @@ import Bond
 class CampaignsViewModel: BaseViewModel {
     
     let arrayCampaigns = Observable<[CampaignItem]>([CampaignItem]())
+
+    var isLoadingMore = Observable<Bool>(false)
+    var isEndOfPageReached = Observable<Bool>(false)
+    
+    private var currentPageIndex: Int = 0
     
     let campaignsAPI: CampaignsAPI
     
@@ -25,13 +30,49 @@ class CampaignsViewModel: BaseViewModel {
     }
     
     func refresh() {
-        campaignsAPI.getCampaigns { [weak self] campaignsResponse in
-            let arrayBanners: [CampaignItem] = campaignsResponse.banners ?? [CampaignItem]()
-            let arrayHotDeals: [CampaignItem] = campaignsResponse.hotDeals ?? [CampaignItem]()
-            let arrayPairs = ObjectPairingService.createAvailablePairsFrom(array1: arrayBanners, array2: arrayHotDeals)
-            self?.arrayCampaigns.send(arrayPairs)
+        let commonPageRequest = CommonPageRequest(pageId: 0)
+        campaignsAPI.getCampaigns(params: commonPageRequest.toDict()) { [weak self] campaignsResponse in
+            self?.isEndOfPageReached.send(false)
+            self?.currentPageIndex = 0
+            self?.refreshSuccessBlock(campaignsResponse: campaignsResponse)
         } failure: {
-            // Intentionally unimplemented
+            self.currentPageIndex = 0
         }
+    }
+    
+    private func refreshSuccessBlock(campaignsResponse: CampaignResponse) {
+        let arrayBanners: [CampaignItem] = campaignsResponse.banners ?? [CampaignItem]()
+        let arrayHotDeals: [CampaignItem] = campaignsResponse.hotDeals ?? [CampaignItem]()
+        let arrayPairs = ObjectPairingService.createAvailablePairsFrom(array1: arrayBanners, array2: arrayHotDeals)
+        arrayCampaigns.send(arrayPairs)
+    }
+    
+    func loadMoreIfAppropriate() {
+        if (isLoadingMore.value == true) { return }
+        if (isEndOfPageReached.value == true) { return }
+        isLoadingMore.send(true)
+        currentPageIndex += 1
+        let commonPageRequest = CommonPageRequest(pageId: currentPageIndex)
+        campaignsAPI.getCampaigns(params: commonPageRequest.toDict()) { [weak self] campaignsResponse in
+            if campaignsResponse.banners?.count == 0 && campaignsResponse.hotDeals?.count == 0 {
+                self?.isEndOfPageReached.send(true)
+                return
+            }
+            self?.loadMoreSuccessBlock(campaignsResponse: campaignsResponse)
+            self?.isLoadingMore.send(false)
+        } failure: {
+            self.isLoadingMore.send(false)
+        }
+    }
+    
+    private func loadMoreSuccessBlock(campaignsResponse: CampaignResponse) {
+        let arrayBanners: [CampaignItem] = campaignsResponse.banners ?? [CampaignItem]()
+        let arrayHotDeals: [CampaignItem] = campaignsResponse.hotDeals ?? [CampaignItem]()
+        let arrayNewPairs: [CampaignItem] = ObjectPairingService.createAvailablePairsFrom(array1: arrayBanners, array2: arrayHotDeals)
+        let arrayAllCampaigns: [CampaignItem] = arrayCampaigns.value
+        var arrayPairsAddedToArrayAllCampaigns = [CampaignItem]()
+        arrayPairsAddedToArrayAllCampaigns.append(contentsOf: arrayAllCampaigns)
+        arrayPairsAddedToArrayAllCampaigns.append(contentsOf: arrayNewPairs)
+        arrayCampaigns.send(arrayPairsAddedToArrayAllCampaigns)
     }
 }
