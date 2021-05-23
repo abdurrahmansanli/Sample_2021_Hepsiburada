@@ -19,6 +19,10 @@ class CampaignsViewModel: BaseViewModel {
     
     private var currentPageIndex: Int = 0
     
+    var timerVisibleCellRefresher: Timer?
+    
+    let actionRefreshVisibleCells = PassthroughSubject<Void,Never>()
+    
     let campaignsAPI: CampaignsAPI
     
     init(api: CampaignsAPI) {
@@ -78,5 +82,21 @@ class CampaignsViewModel: BaseViewModel {
         arrayPairsAddedToArrayAllCampaigns.append(contentsOf: arrayAllCampaigns)
         arrayPairsAddedToArrayAllCampaigns.append(contentsOf: arrayNewPairs)
         arrayCampaigns.send(arrayPairsAddedToArrayAllCampaigns)
+    }
+    
+    func initializeTimerRemainingTimeRefresher() {
+        timerVisibleCellRefresher
+            = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [unowned self] timer in
+                actionRefreshVisibleCells.send()
+        }
+    }
+    
+    /* TODO: When you stop using this controller as a subview and start using it as an individual view;
+     make sure to call deinitializeTimerRemainingTimeRefresher() on viewWillDisappear and move call for
+     initializeTimerRemainingTimeRefresher to viewWillAppear. This controller was used as a subview due
+     to tutorial purposes and app structure not being ready yet.
+     */
+    func deinitializeTimerRemainingTimeRefresher() {
+        timerVisibleCellRefresher?.invalidate()
     }
 }

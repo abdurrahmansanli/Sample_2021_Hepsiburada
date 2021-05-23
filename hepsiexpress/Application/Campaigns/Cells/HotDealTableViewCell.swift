@@ -16,6 +16,7 @@ class HotDealTableViewCell: UITableViewCell {
     
     let labelDescription: UILabel = {
         let label = UILabel()
+        label.textAlignment = .right
         return label
     }()
     
@@ -39,7 +40,8 @@ class HotDealTableViewCell: UITableViewCell {
         contentView.addSubview(labelDescription)
         labelDescription.snp.makeConstraints { maker in
             maker.top.equalTo(labelTitle.snp.bottom).offset(16)
-            maker.left.right.equalToSuperview().offset(16)
+            maker.left.equalToSuperview().offset(16)
+            maker.right.equalToSuperview().inset(16)
             maker.bottom.equalToSuperview().inset(16)
         }
     }
@@ -49,7 +51,11 @@ class HotDealTableViewCell: UITableViewCell {
             labelTitle.text = title
         }
         if let expirationDate = hotDeal.expirationDate {
-            labelDescription.text = expirationDate
+            if let remainingTimeString = expirationDate.getRemainingTimeString() {
+                labelDescription.text = remainingTimeString
+            } else {
+                labelDescription.text = "Expired."
+            }
         }
     }
 }

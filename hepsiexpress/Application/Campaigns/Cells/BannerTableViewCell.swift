@@ -59,6 +59,7 @@ class BannerTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         imageViewBanner.image = nil
     }
 }

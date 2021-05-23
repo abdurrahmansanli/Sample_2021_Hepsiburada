@@ -55,6 +55,7 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialLoadingBlock()
+        viewModel.initializeTimerRemainingTimeRefresher()
     }
     
     override func layout() {
@@ -109,6 +110,10 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
                 self.refreshControl.endRefreshing()
                 self.activityIndicatorInitialLoadingView.stopAnimating()
             }
+        }.dispose(in: disposeBag)
+        
+        viewModel.actionRefreshVisibleCells.observeNext { [weak self] in
+            self?.tableView.reloadData()
         }.dispose(in: disposeBag)
     }
     

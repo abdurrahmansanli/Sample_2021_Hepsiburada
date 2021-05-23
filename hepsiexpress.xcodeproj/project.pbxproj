@@ -17,6 +17,7 @@
 		84565426265A615D00CEAE96 /* CommonPageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84565425265A615D00CEAE96 /* CommonPageRequest.swift */; };
 		84565428265A61A000CEAE96 /* RequestBodyConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84565427265A61A000CEAE96 /* RequestBodyConvertable.swift */; };
 		8456542A265A61C500CEAE96 /* ObjectConverterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84565429265A61C500CEAE96 /* ObjectConverterService.swift */; };
+		8456542C265AA00F00CEAE96 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456542B265AA00F00CEAE96 /* String+Extension.swift */; };
 		846A5F062658269A00BAD564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A5F052658269A00BAD564 /* AppDelegate.swift */; };
 		846A5F0F2658269B00BAD564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846A5F0E2658269B00BAD564 /* Assets.xcassets */; };
 		846A5F122658269B00BAD564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A5F102658269B00BAD564 /* LaunchScreen.storyboard */; };
@@ -62,6 +63,7 @@
 		84565425265A615D00CEAE96 /* CommonPageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPageRequest.swift; sourceTree = "<group>"; };
 		84565427265A61A000CEAE96 /* RequestBodyConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBodyConvertable.swift; sourceTree = "<group>"; };
 		84565429265A61C500CEAE96 /* ObjectConverterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectConverterService.swift; sourceTree = "<group>"; };
+		8456542B265AA00F00CEAE96 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		846A5F022658269A00BAD564 /* hepsiexpress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hepsiexpress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A5F052658269A00BAD564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846A5F0E2658269B00BAD564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 		84C77ED226582AE000E014FB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8456542B265AA00F00CEAE96 /* String+Extension.swift */,
 				84565427265A61A000CEAE96 /* RequestBodyConvertable.swift */,
 			);
 			path = Extensions;
@@ -553,6 +556,7 @@
 				846A5F062658269A00BAD564 /* AppDelegate.swift in Sources */,
 				8456541D26590F2400CEAE96 /* MainViewModel.swift in Sources */,
 				8456542A265A61C500CEAE96 /* ObjectConverterService.swift in Sources */,
+				8456542C265AA00F00CEAE96 /* String+Extension.swift in Sources */,
 				8456541F2659146B00CEAE96 /* ObjectPairingService.swift in Sources */,
 				84C77EDC26582DCE00E014FB /* BaseViewModel.swift in Sources */,
 				84C77EE026590A8A00E014FB /* CampaignsAPI.swift in Sources */,
