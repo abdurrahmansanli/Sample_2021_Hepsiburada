@@ -45,11 +45,13 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
                let cell = tableView.dequeueReusableCell(withIdentifier: BannerTableViewCell.description())
                 as? BannerTableViewCell {
                 cell.refreshWithBanner(banner)
+                cell.selectionStyle = .none
                 return cell
             } else if let hotDeal = currentCampaignItem as? HotDeal,
                       let cell = tableView.dequeueReusableCell(withIdentifier: HotDealTableViewCell.description())
                         as? HotDealTableViewCell {
                 cell.refreshWithHotDeal(hotDeal)
+                cell.selectionStyle = .none
                 return cell
             }
             return UITableViewCell()
@@ -59,7 +61,5 @@ class CampaignsViewController: BaseViewController<CampaignsViewModel> {
 
 
 extension CampaignsViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+    
 }
