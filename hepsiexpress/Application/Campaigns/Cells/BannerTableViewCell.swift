@@ -32,7 +32,6 @@ class BannerTableViewCell: UITableViewCell {
         contentView.addSubview(imageViewBanner)
         imageViewBanner.snp.makeConstraints { maker in
             maker.top.bottom.equalToSuperview()
-            maker.left.right.greaterThanOrEqualToSuperview()
             constraintImageViewBannerHeight = maker.height.equalTo(0).priority(.low).constraint
             constraintImageViewBannerWidth = maker.width.equalTo(0).priority(.low).constraint
             maker.centerX.equalToSuperview()
