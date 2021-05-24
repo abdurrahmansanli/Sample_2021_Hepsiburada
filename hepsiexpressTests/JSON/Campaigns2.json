@@ -1,0 +1,29 @@
+{
+    "hotDeals": [
+                {
+            "title": "Hot Deal",
+            "expirationDate": "2020-02-22T11:30:00+03:00"
+        },
+        {
+            "title": "Hot Deal",
+            "expirationDate": "2020-02-23T15:24:00+03:00"
+        },
+        {
+            "title": "Hot Deal",
+            "expirationDate": "2020-02-22T11:30:00+03:00"
+        },
+        {
+            "title": "Hot Deal",
+            "expirationDate": "2020-02-23T15:24:00+03:00"
+        }
+    ],
+    "banners": [
+        {
+            "image": {
+                "width": 400,
+                "height": 400,
+                "url": "https://dummyimage.com/400X400/e3de81/0010f0.png"
+            }
+        }
+    ]
+}

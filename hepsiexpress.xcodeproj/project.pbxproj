@@ -3,16 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43F83CB77E7DB164D283A8DC /* Pods_hepsiexpressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E49A807EAAB5890F00BDE3 /* Pods_hepsiexpressTests.framework */; };
+		5BBC199343925990E2BB1FF5 /* Pods_hepsiexpress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570DC3AAA384F27B538A4BC5 /* Pods_hepsiexpress.framework */; };
+		8456541D26590F2400CEAE96 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456541C26590F2400CEAE96 /* MainViewModel.swift */; };
+		8456541F2659146B00CEAE96 /* ObjectPairingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456541E2659146B00CEAE96 /* ObjectPairingService.swift */; };
+		8456542226596F7500CEAE96 /* HotDealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456542126596F7500CEAE96 /* HotDealTableViewCell.swift */; };
+		8456542426596FAB00CEAE96 /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456542326596FAB00CEAE96 /* BannerTableViewCell.swift */; };
+		84565426265A615D00CEAE96 /* CommonPageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84565425265A615D00CEAE96 /* CommonPageRequest.swift */; };
+		84565428265A61A000CEAE96 /* RequestBodyConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84565427265A61A000CEAE96 /* RequestBodyConvertable.swift */; };
+		8456542A265A61C500CEAE96 /* ObjectConverterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84565429265A61C500CEAE96 /* ObjectConverterService.swift */; };
+		8456542C265AA00F00CEAE96 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456542B265AA00F00CEAE96 /* String+Extension.swift */; };
 		846A5F062658269A00BAD564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A5F052658269A00BAD564 /* AppDelegate.swift */; };
-		846A5F0A2658269A00BAD564 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A5F092658269A00BAD564 /* ViewController.swift */; };
 		846A5F0F2658269B00BAD564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846A5F0E2658269B00BAD564 /* Assets.xcassets */; };
 		846A5F122658269B00BAD564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A5F102658269B00BAD564 /* LaunchScreen.storyboard */; };
 		846A5F1D2658269B00BAD564 /* hepsiexpressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A5F1C2658269B00BAD564 /* hepsiexpressTests.swift */; };
 		846A5F282658269B00BAD564 /* hepsiexpressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A5F272658269B00BAD564 /* hepsiexpressUITests.swift */; };
+		84B1CB0F265ADB6800CFB2DC /* CampaignsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1CB0E265ADB6800CFB2DC /* CampaignsSpec.swift */; };
+		84B1CB12265ADE3100CFB2DC /* CampaignsAPIStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1CB11265ADE3100CFB2DC /* CampaignsAPIStub.swift */; };
+		84B1CB15265AE53E00CFB2DC /* Campaigns1.json in Resources */ = {isa = PBXBuildFile; fileRef = 84B1CB14265AE53E00CFB2DC /* Campaigns1.json */; };
+		84B1CB17265AEA2A00CFB2DC /* Campaigns2.json in Resources */ = {isa = PBXBuildFile; fileRef = 84B1CB16265AEA2A00CFB2DC /* Campaigns2.json */; };
+		84C77ECC265829C900E014FB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C77ECB265829C900E014FB /* MainViewController.swift */; };
+		84C77ED526582D8500E014FB /* CampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C77ED426582D8500E014FB /* CampaignsViewController.swift */; };
+		84C77ED726582D8F00E014FB /* CampaignsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C77ED626582D8F00E014FB /* CampaignsViewModel.swift */; };
+		84C77EDA26582DC700E014FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C77ED926582DC700E014FB /* BaseViewController.swift */; };
+		84C77EDC26582DCE00E014FB /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C77EDB26582DCE00E014FB /* BaseViewModel.swift */; };
+		84C77EDE2658785000E014FB /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C77EDD2658785000E014FB /* BaseAPI.swift */; };
+		84C77EE026590A8A00E014FB /* CampaignsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C77EDF26590A8A00E014FB /* CampaignsAPI.swift */; };
+		84C77EE226590B3100E014FB /* CampaignResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C77EE126590B3100E014FB /* CampaignResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +54,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		387FEA4011401791B9A53734 /* Pods-hepsiexpress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hepsiexpress.release.xcconfig"; path = "Target Support Files/Pods-hepsiexpress/Pods-hepsiexpress.release.xcconfig"; sourceTree = "<group>"; };
+		570DC3AAA384F27B538A4BC5 /* Pods_hepsiexpress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hepsiexpress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8456541C26590F2400CEAE96 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8456541E2659146B00CEAE96 /* ObjectPairingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPairingService.swift; sourceTree = "<group>"; };
+		8456542126596F7500CEAE96 /* HotDealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDealTableViewCell.swift; sourceTree = "<group>"; };
+		8456542326596FAB00CEAE96 /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
+		84565425265A615D00CEAE96 /* CommonPageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPageRequest.swift; sourceTree = "<group>"; };
+		84565427265A61A000CEAE96 /* RequestBodyConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBodyConvertable.swift; sourceTree = "<group>"; };
+		84565429265A61C500CEAE96 /* ObjectConverterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectConverterService.swift; sourceTree = "<group>"; };
+		8456542B265AA00F00CEAE96 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		846A5F022658269A00BAD564 /* hepsiexpress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hepsiexpress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A5F052658269A00BAD564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		846A5F092658269A00BAD564 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		846A5F0E2658269B00BAD564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846A5F112658269B00BAD564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846A5F132658269B00BAD564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +75,22 @@
 		846A5F232658269B00BAD564 /* hepsiexpressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hepsiexpressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A5F272658269B00BAD564 /* hepsiexpressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hepsiexpressUITests.swift; sourceTree = "<group>"; };
 		846A5F292658269B00BAD564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B1CB0E265ADB6800CFB2DC /* CampaignsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsSpec.swift; sourceTree = "<group>"; };
+		84B1CB11265ADE3100CFB2DC /* CampaignsAPIStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsAPIStub.swift; sourceTree = "<group>"; };
+		84B1CB14265AE53E00CFB2DC /* Campaigns1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Campaigns1.json; sourceTree = "<group>"; };
+		84B1CB16265AEA2A00CFB2DC /* Campaigns2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Campaigns2.json; sourceTree = "<group>"; };
+		84C77ECB265829C900E014FB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		84C77ED426582D8500E014FB /* CampaignsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewController.swift; sourceTree = "<group>"; };
+		84C77ED626582D8F00E014FB /* CampaignsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsViewModel.swift; sourceTree = "<group>"; };
+		84C77ED926582DC700E014FB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		84C77EDB26582DCE00E014FB /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		84C77EDD2658785000E014FB /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		84C77EDF26590A8A00E014FB /* CampaignsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsAPI.swift; sourceTree = "<group>"; };
+		84C77EE126590B3100E014FB /* CampaignResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignResponse.swift; sourceTree = "<group>"; };
+		932BDCCF4DB0DB8D8349A535 /* Pods-hepsiexpress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hepsiexpress.debug.xcconfig"; path = "Target Support Files/Pods-hepsiexpress/Pods-hepsiexpress.debug.xcconfig"; sourceTree = "<group>"; };
+		A378B1CB09357DF73A6F9F8E /* Pods-hepsiexpressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hepsiexpressTests.release.xcconfig"; path = "Target Support Files/Pods-hepsiexpressTests/Pods-hepsiexpressTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1E49A807EAAB5890F00BDE3 /* Pods_hepsiexpressTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hepsiexpressTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2BC4A66166F2612A8927E17 /* Pods-hepsiexpressTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hepsiexpressTests.debug.xcconfig"; path = "Target Support Files/Pods-hepsiexpressTests/Pods-hepsiexpressTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BBC199343925990E2BB1FF5 /* Pods_hepsiexpress.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F83CB77E7DB164D283A8DC /* Pods_hepsiexpressTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +120,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F775285D8D58BF53FE086DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				932BDCCF4DB0DB8D8349A535 /* Pods-hepsiexpress.debug.xcconfig */,
+				387FEA4011401791B9A53734 /* Pods-hepsiexpress.release.xcconfig */,
+				F2BC4A66166F2612A8927E17 /* Pods-hepsiexpressTests.debug.xcconfig */,
+				A378B1CB09357DF73A6F9F8E /* Pods-hepsiexpressTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8456542026596F6800CEAE96 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8456542326596FAB00CEAE96 /* BannerTableViewCell.swift */,
+				8456542126596F7500CEAE96 /* HotDealTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		846A5EF92658269A00BAD564 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +147,8 @@
 				846A5F1B2658269B00BAD564 /* hepsiexpressTests */,
 				846A5F262658269B00BAD564 /* hepsiexpressUITests */,
 				846A5F032658269A00BAD564 /* Products */,
+				1F775285D8D58BF53FE086DA /* Pods */,
+				FBDB3C6F07CF01E203A7D2D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,8 +165,12 @@
 		846A5F042658269A00BAD564 /* hepsiexpress */ = {
 			isa = PBXGroup;
 			children = (
-				846A5F052658269A00BAD564 /* AppDelegate.swift */,
-				846A5F092658269A00BAD564 /* ViewController.swift */,
+				84C77EC82658299C00E014FB /* AppDelegate */,
+				84C77ED826582DBB00E014FB /* BaseClasses */,
+				84C77ECD26582A9400E014FB /* Networking */,
+				84C77ED126582AC800E014FB /* Services */,
+				84C77EC9265829AF00E014FB /* Application */,
+				84C77ED226582AE000E014FB /* Extensions */,
 				84C77EC7265826FA00E014FB /* Resources */,
 			);
 			path = hepsiexpress;
@@ -105,7 +179,10 @@
 		846A5F1B2658269B00BAD564 /* hepsiexpressTests */ = {
 			isa = PBXGroup;
 			children = (
+				84B1CB13265AE4E700CFB2DC /* JSON */,
+				84B1CB10265ADE2300CFB2DC /* APIStubs */,
 				846A5F1C2658269B00BAD564 /* hepsiexpressTests.swift */,
+				84B1CB0E265ADB6800CFB2DC /* CampaignsSpec.swift */,
 				846A5F1E2658269B00BAD564 /* Info.plist */,
 			);
 			path = hepsiexpressTests;
@@ -120,6 +197,23 @@
 			path = hepsiexpressUITests;
 			sourceTree = "<group>";
 		};
+		84B1CB10265ADE2300CFB2DC /* APIStubs */ = {
+			isa = PBXGroup;
+			children = (
+				84B1CB11265ADE3100CFB2DC /* CampaignsAPIStub.swift */,
+			);
+			path = APIStubs;
+			sourceTree = "<group>";
+		};
+		84B1CB13265AE4E700CFB2DC /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				84B1CB14265AE53E00CFB2DC /* Campaigns1.json */,
+				84B1CB16265AEA2A00CFB2DC /* Campaigns2.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		84C77EC7265826FA00E014FB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +224,113 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		84C77EC82658299C00E014FB /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				846A5F052658269A00BAD564 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		84C77EC9265829AF00E014FB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				84C77ECA265829B800E014FB /* Main */,
+				84C77ED326582D7800E014FB /* Campaigns */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		84C77ECA265829B800E014FB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				84C77ECB265829C900E014FB /* MainViewController.swift */,
+				8456541C26590F2400CEAE96 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		84C77ECD26582A9400E014FB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				84C77ECE26582AAC00E014FB /* APIs */,
+				84C77ECF26582AB100E014FB /* Request */,
+				84C77ED026582AB700E014FB /* Response */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		84C77ECE26582AAC00E014FB /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				84C77EDF26590A8A00E014FB /* CampaignsAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		84C77ECF26582AB100E014FB /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				84565425265A615D00CEAE96 /* CommonPageRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		84C77ED026582AB700E014FB /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				84C77EE126590B3100E014FB /* CampaignResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		84C77ED126582AC800E014FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8456541E2659146B00CEAE96 /* ObjectPairingService.swift */,
+				84565429265A61C500CEAE96 /* ObjectConverterService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84C77ED226582AE000E014FB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8456542B265AA00F00CEAE96 /* String+Extension.swift */,
+				84565427265A61A000CEAE96 /* RequestBodyConvertable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84C77ED326582D7800E014FB /* Campaigns */ = {
+			isa = PBXGroup;
+			children = (
+				84C77ED426582D8500E014FB /* CampaignsViewController.swift */,
+				84C77ED626582D8F00E014FB /* CampaignsViewModel.swift */,
+				8456542026596F6800CEAE96 /* Cells */,
+			);
+			path = Campaigns;
+			sourceTree = "<group>";
+		};
+		84C77ED826582DBB00E014FB /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				84C77ED926582DC700E014FB /* BaseViewController.swift */,
+				84C77EDB26582DCE00E014FB /* BaseViewModel.swift */,
+				84C77EDD2658785000E014FB /* BaseAPI.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		FBDB3C6F07CF01E203A7D2D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				570DC3AAA384F27B538A4BC5 /* Pods_hepsiexpress.framework */,
+				D1E49A807EAAB5890F00BDE3 /* Pods_hepsiexpressTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +338,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 846A5F2C2658269B00BAD564 /* Build configuration list for PBXNativeTarget "hepsiexpress" */;
 			buildPhases = (
+				461BD5858AC147B0368F808A /* [CP] Check Pods Manifest.lock */,
 				846A5EFE2658269A00BAD564 /* Sources */,
 				846A5EFF2658269A00BAD564 /* Frameworks */,
 				846A5F002658269A00BAD564 /* Resources */,
+				47A7D09BCD18D43087006540 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,9 +357,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 846A5F2F2658269B00BAD564 /* Build configuration list for PBXNativeTarget "hepsiexpressTests" */;
 			buildPhases = (
+				239D122632B9951E669B10B4 /* [CP] Check Pods Manifest.lock */,
 				846A5F142658269B00BAD564 /* Sources */,
 				846A5F152658269B00BAD564 /* Frameworks */,
 				846A5F162658269B00BAD564 /* Resources */,
+				09AA0CBFB2859F4D4D63386D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,6 +447,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B1CB15265AE53E00CFB2DC /* Campaigns1.json in Resources */,
+				84B1CB17265AEA2A00CFB2DC /* Campaigns2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +461,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09AA0CBFB2859F4D4D63386D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hepsiexpressTests/Pods-hepsiexpressTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hepsiexpressTests/Pods-hepsiexpressTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hepsiexpressTests/Pods-hepsiexpressTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		239D122632B9951E669B10B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hepsiexpressTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		461BD5858AC147B0368F808A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hepsiexpress-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47A7D09BCD18D43087006540 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hepsiexpress/Pods-hepsiexpress-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hepsiexpress/Pods-hepsiexpress-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hepsiexpress/Pods-hepsiexpress-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		846A5EFE2658269A00BAD564 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846A5F0A2658269A00BAD564 /* ViewController.swift in Sources */,
+				84C77EDA26582DC700E014FB /* BaseViewController.swift in Sources */,
+				84C77ED526582D8500E014FB /* CampaignsViewController.swift in Sources */,
+				84C77ECC265829C900E014FB /* MainViewController.swift in Sources */,
+				84565428265A61A000CEAE96 /* RequestBodyConvertable.swift in Sources */,
+				84C77ED726582D8F00E014FB /* CampaignsViewModel.swift in Sources */,
 				846A5F062658269A00BAD564 /* AppDelegate.swift in Sources */,
+				8456541D26590F2400CEAE96 /* MainViewModel.swift in Sources */,
+				8456542A265A61C500CEAE96 /* ObjectConverterService.swift in Sources */,
+				8456542C265AA00F00CEAE96 /* String+Extension.swift in Sources */,
+				8456541F2659146B00CEAE96 /* ObjectPairingService.swift in Sources */,
+				84C77EDC26582DCE00E014FB /* BaseViewModel.swift in Sources */,
+				84C77EE026590A8A00E014FB /* CampaignsAPI.swift in Sources */,
+				8456542426596FAB00CEAE96 /* BannerTableViewCell.swift in Sources */,
+				8456542226596F7500CEAE96 /* HotDealTableViewCell.swift in Sources */,
+				84565426265A615D00CEAE96 /* CommonPageRequest.swift in Sources */,
+				84C77EDE2658785000E014FB /* BaseAPI.swift in Sources */,
+				84C77EE226590B3100E014FB /* CampaignResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +571,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B1CB12265ADE3100CFB2DC /* CampaignsAPIStub.swift in Sources */,
+				84B1CB0F265ADB6800CFB2DC /* CampaignsSpec.swift in Sources */,
 				846A5F1D2658269B00BAD564 /* hepsiexpressTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,12 +730,14 @@
 		};
 		846A5F2D2658269B00BAD564 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 932BDCCF4DB0DB8D8349A535 /* Pods-hepsiexpress.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5L839368Y;
 				INFOPLIST_FILE = hepsiexpress/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,12 +751,14 @@
 		};
 		846A5F2E2658269B00BAD564 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 387FEA4011401791B9A53734 /* Pods-hepsiexpress.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5L839368Y;
 				INFOPLIST_FILE = hepsiexpress/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,6 +772,7 @@
 		};
 		846A5F302658269B00BAD564 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2BC4A66166F2612A8927E17 /* Pods-hepsiexpressTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +795,7 @@
 		};
 		846A5F312658269B00BAD564 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A378B1CB09357DF73A6F9F8E /* Pods-hepsiexpressTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
