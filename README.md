@@ -1,6 +1,9 @@
 # hepsiexpress
 iOS Developer case study project for hepsiburada.com - hepsiexpress.
 
+## Verdict:
+Interviews took about 6 weeks in total including several HR meetings and 2 technical meetings. Although meetings were positive overall; the offer being made was below my current expectations so it wasn't a dealbreaker to my current position in Appcent.
+
 [iOS Case Study.pdf](https://github.com/abdurrahmansanli/hepsiexpress/files/6524123/iOS.Case.Study.pdf)
 
 ```Latest stable branch: development```
